@@ -13,7 +13,7 @@ provider "random" {
 
 
 resource "random_string" "random" {
-  length           = 15
+  length           = 20
   special          = true
   override_special = "/@£$"
 }
