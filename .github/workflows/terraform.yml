@@ -53,6 +53,21 @@ permissions:
   contents: read
 
 jobs:
+  directories:
+    name: "Directory-changes"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: theappnest/terraform-monorepo-action@master
+        id: directories
+        with:
+          ignore: |
+            aws/**/policies
+            aws/**/templates
+            aws/**/scripts
+      - run: echo ${{ steps.directories.outputs.modules }}
+    outputs:
+      dirs: ${{ steps.directories.outputs.modules }}
+      
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
