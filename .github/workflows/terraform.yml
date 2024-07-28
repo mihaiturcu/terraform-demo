@@ -95,9 +95,6 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.DEMO_SECRET_TOKEN }}
 
-    - name: Change Directory
-      run: cd demo # to be parameterized at some later point
-
     - name: list content for dir
       run: pwd && ls -la
 
