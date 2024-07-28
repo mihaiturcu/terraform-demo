@@ -51,6 +51,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write #needed if you actually want to deploy the code
 
 jobs:
   directories:
