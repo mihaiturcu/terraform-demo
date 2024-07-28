@@ -77,6 +77,9 @@ jobs:
     - name: Change Directory
       run: cd demo # to be parameterized at some later point
 
+    - name: list content for dir
+      run: pwd && ls -la
+
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
