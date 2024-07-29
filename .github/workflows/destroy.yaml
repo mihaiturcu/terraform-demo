@@ -25,7 +25,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init  
+        run: cd stage && terraform init  
         
       - name: Show Destroy plan
         run: cd stage && terraform plan -destroy
