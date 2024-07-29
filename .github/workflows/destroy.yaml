@@ -28,9 +28,9 @@ jobs:
         run: terraform init  
         
       - name: Show Destroy plan
-        run: terraform plan -destroy
+        run: cd stage && terraform plan -destroy
         continue-on-error: true
 
       - name: Terraform destroy
         id: destroy
-        run: terraform destroy -auto-approve
+        run: cd stage && terraform destroy -auto-approve
